@@ -31,9 +31,8 @@ class QuotesController < ApplicationController
   end
 
   private
-  def json_response(object, status = :ok)
-    render json: object, status: status
-  end
+
+  # Let's remove the code from our controller and move it into our new module:
 
   def quote_params
     params.permit(:author, :content)
