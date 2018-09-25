@@ -11,6 +11,7 @@ class QuotesController < ApplicationController
   end
 
   def create
+    binding.pry
     @quote = Quote.create!(quote_params)
     json_response(@quote, :created)
   end
