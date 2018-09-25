@@ -12,6 +12,12 @@ class Seed
     seed.generate_quotes
   end
 
+  def generat_users
+    User.destroy_all
+    User.create(name: 'Eric', email: 'eric@eric.com', password: '123456')
+    User.create(name: 'Nick', email: 'nick@nick.com', password: '123456')
+  end
+
   def generate_quotes
     20.times do |i|
       author =
